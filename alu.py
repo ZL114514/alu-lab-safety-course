@@ -70,6 +70,9 @@ def req(path, method='GET', params=None, body=None, retries=4, token=None):
         url += '?' + urllib.parse.urlencode(params)
     data = json.dumps(body).encode('utf-8') if body is not None else None
     tok = token or load_json(STATE_F).get('token') or os.environ.get('ALU_TOKEN', '')
+    if not tok and token != 'anon':
+        raise AuthError('not logged in yet: run  python alu.py captcha  then  python alu.py login <CODE>'
+                        '   (state.json 里还没 token)')
     last = ''
     for attempt in range(retries):
         r = urllib.request.Request(url, data=data, method=method, headers={
