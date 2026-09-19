@@ -1,0 +1,17 @@
+# 运行时产物 —— 含明文账号密码与 token，切勿提交
+state.json
+token.txt
+login.json
+
+# 课程/进度缓存与验证码图
+courses.json
+progress.json
+cap.jpg
+cap_big.png
+
+# 杂项
+*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
