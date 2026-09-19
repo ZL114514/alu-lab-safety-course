@@ -206,7 +206,8 @@ alu-lab-safety-course/
 ├── state.example.json     # 配置模板（复制为 state.json 后填账号）
 ├── .gitignore             # 忽略 token / 课程缓存 / 验证码图
 └── docs/
-    └── api-notes.md       # 平台接口与逆向笔记（接口表、参数、坑）
+    ├── api-notes.md       # 平台接口与逆向笔记（接口表、参数、坑）
+    └── hermes-skill.md    # 同内容的 Hermes Agent 技能定义（换机器时可直接拷回技能目录复用）
 ```
 
 运行时另外生成（不入库）：`state.json`、`courses.json`、`cap.jpg`、`cap_big.png`。
